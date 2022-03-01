@@ -35,9 +35,7 @@ class TestAppState extends BaseAppState {
             future: downloadAssetsAndData(),
             builder: (ctx, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                Future.delayed(const Duration(milliseconds: 1), () {
-                  goNext(ctx, TestNavigator.LOGIN);
-                });
+                goNext(ctx, TestNavigator.LOGIN);
               }
               return const SplashWidget();
             },
