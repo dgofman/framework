@@ -53,3 +53,10 @@ Write an implementation for the base_app.dart, base_navigator.dart, shared_model
     runApp(MyAppState().createApp());
   }
 ```
+
+## See Also
+
+- https://pub.dev/packages/framework
+- https://pub.dev/packages/l10n_flutter
+- https://pub.dev/packages/form_components
+- https://pub.dev/packages/expansion_datagrid
