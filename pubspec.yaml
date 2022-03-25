@@ -1,5 +1,5 @@
 name: framework
-description: This is a radical new approach to creating user interfaces in the world of Flutter. While the traditional framework is no longer needed in order to learn the difference between the StatelessWidget and StatefulWidget classes.
+description: While the traditional framework is no longer needed in order to learn the difference between the StatelessWidget and StatefulWidget classes.
 homepage: https://github.com/dgofman/framework
 
 # The following defines the version and build number for your application.
@@ -12,7 +12,7 @@ homepage: https://github.com/dgofman/framework
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.2
+version: 1.0.3
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
