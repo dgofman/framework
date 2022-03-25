@@ -29,5 +29,6 @@ class TestNavigator extends BaseNavigator {
   }
 
   @override
-  BaseWidgetState landingPage(RouteSettings settings, Provider provider) => LoginWidget(provider);
+  BaseWidgetState landingPage(RouteSettings settings, Provider provider) =>
+      LoginWidget(provider);
 }

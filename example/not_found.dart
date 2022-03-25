@@ -3,7 +3,6 @@ import 'package:framework/base_widget.dart';
 import 'package:framework/provider.dart';
 
 class NotFoundWidget extends BaseWidgetState {
-
   NotFoundWidget(Provider provider) : super(provider, isWhitelist: true);
 
   @override
@@ -14,9 +13,7 @@ class NotFoundWidget extends BaseWidgetState {
         title: const Text('Page not found.'),
       ),
       body: Container(
-        margin: const EdgeInsets.only(
-            top: 50.0
-        ),
+        margin: const EdgeInsets.only(top: 50.0),
         alignment: Alignment.center,
         child: const Text('Page not found.'),
       ),

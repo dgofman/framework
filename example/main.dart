@@ -11,8 +11,10 @@ void main() async {
 }
 
 class TestAppState extends BaseAppState {
-  TestAppState() :
-        super(SharedModel(navigator: TestNavigator())); //Implement your own ShareModel and Navigator class.
+  TestAppState()
+      : super(SharedModel(
+            navigator:
+                TestNavigator())); //Implement your own ShareModel and Navigator class.
 
   Future<dynamic> downloadAssetsAndData() async {
     //Write your logic here
@@ -26,7 +28,7 @@ class TestAppState extends BaseAppState {
         appWidget: this,
         sharedModel: sharedModel,
         child: MaterialApp(
-          onGenerateRoute: sharedModel.navigator.onGenerateRoute,
+          onGenerateRoute: sharedModel.navigator.onGenerateRoute as RouteFactory?,
           theme: sharedModel.theme,
           locale: sharedModel.locale,
           debugShowCheckedModeBanner: false,

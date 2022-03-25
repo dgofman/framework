@@ -14,9 +14,9 @@ abstract class BaseNavigator implements INavigator {
 
   @override
   get onGenerateRoute {
-      return  (RouteSettings settings) {
-        return createRoute(settings);
-      };
+    return (RouteSettings settings) {
+      return createRoute(settings);
+    };
   }
 
   @override
@@ -30,10 +30,10 @@ abstract class BaseNavigator implements INavigator {
             stateWidget = landingPage(settings, provider);
           }
           final widget = BaseWidget(() => stateWidget);
-          provider.sharedModel.routeInfo = RouteInfo(widget, stateWidget, settings);
+          provider.sharedModel.routeInfo =
+              RouteInfo(widget, stateWidget, settings);
           return widget;
-        }
-    );
+        });
   }
 
   BaseWidgetState landingPage(RouteSettings settings, Provider provider);

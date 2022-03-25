@@ -11,7 +11,9 @@ class _BaseApp extends StatefulWidget {
   State<_BaseApp> createState() => _stateWidget;
 }
 
-abstract class BaseAppState extends State<_BaseApp> with WidgetsBindingObserver implements IProvider {
+abstract class BaseAppState extends State<_BaseApp>
+    with WidgetsBindingObserver
+    implements IProvider {
   final SharedModel sharedModel;
 
   BaseAppState(this.sharedModel);
@@ -19,14 +21,14 @@ abstract class BaseAppState extends State<_BaseApp> with WidgetsBindingObserver 
   _BaseApp createApp() => _BaseApp(this);
 
   @override
-  void changeLocale(BuildContext context, Locale locale) async {
+  Future<void> changeLocale(BuildContext context, Locale locale) async {
     setState(() {
       sharedModel.locale = locale;
     });
   }
 
   @override
-  void changeTheme(BuildContext context, ThemeData theme) async {
+  Future<void> changeTheme(BuildContext context, ThemeData theme) async {
     setState(() {
       sharedModel.theme = theme;
     });

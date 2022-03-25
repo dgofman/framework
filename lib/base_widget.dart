@@ -12,7 +12,8 @@ class BaseWidget extends StatefulWidget {
   State<StatefulWidget> createState() => _factory();
 }
 
-abstract class BaseWidgetState extends State<BaseWidget> with AutomaticKeepAliveClientMixin<BaseWidget> {
+abstract class BaseWidgetState extends State<BaseWidget>
+    with AutomaticKeepAliveClientMixin<BaseWidget> {
   final bool isWhitelist;
   final Provider _provider;
 
@@ -45,15 +46,16 @@ abstract class BaseWidgetState extends State<BaseWidget> with AutomaticKeepAlive
   }
 
   GestureTapCallback get goBack => () {
-    Navigator.pop(context);
-  };
+        Navigator.pop(context);
+      };
 
   void goNext(String name, [Object? argument]) {
     navigator.routeName = name;
     if (argument == null) {
       Navigator.of(context).pushReplacementNamed(name);
     } else {
-      final route = navigator.createRoute(RouteSettings(name: name, arguments: argument));
+      final route =
+          navigator.createRoute(RouteSettings(name: name, arguments: argument));
       Navigator.push(context, route);
     }
   }
@@ -61,7 +63,8 @@ abstract class BaseWidgetState extends State<BaseWidget> with AutomaticKeepAlive
   Drawer createDrawer(BuildContext context, List<Widget> children) {
     return Drawer(
       child: ListView(
-        primary: false, //https://api.flutter.dev/flutter/widgets/ScrollView/physics.html
+        primary:
+            false, //https://api.flutter.dev/flutter/widgets/ScrollView/physics.html
         padding: EdgeInsets.zero,
         children: children,
       ),

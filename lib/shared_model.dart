@@ -11,8 +11,6 @@ class SharedModel {
   Locale? locale;
   RouteInfo? routeInfo;
 
-  SharedModel({
-    required this.navigator,
-    ThemeData? theme
-  }) : theme = theme ?? ThemeData.light();
+  SharedModel({required this.navigator, ThemeData? theme})
+      : theme = theme ?? ThemeData.light();
 }
